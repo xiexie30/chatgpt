@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ChatGPT</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .container {
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 600px;
+            height: 300px;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            vertical-align: top; /* 将文本框中的文本从上方开始显示 */
+            overflow: auto; /* 当文本超出文本框高度时，显示滚动条 */
+            
+            word-wrap: break-word;/* 文本内容自动换行*/
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+            <!-- <input type="text" id="textbox1" name="textbox1" value="{{ textbox1_text }}" /><br>
+            <input type="text" id="textbox2" name="textbox2" value="{{ textbox2_text }}" /><br> -->
+            <textarea id="textbox1" name="textbox1" rows="16" cols="100" style="font-size: 20px;">{{ textbox1_text }}</textarea><br>
+            <textarea id="textbox2" name="textbox2" rows="16" cols="100" style="font-size: 20px;">{{ textbox2_text }}</textarea><br>
+            <input type="submit" value="发送" />
+        </form>
+    </div>
+</body>
+</html>
